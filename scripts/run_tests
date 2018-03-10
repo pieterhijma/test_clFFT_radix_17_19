@@ -1,0 +1,53 @@
+#!/bin/bash
+
+source ./scripts/common.bash
+
+ensure_dir() {
+    local test=$1
+    local basedir=$(dirname $test)
+    if [ ! -d $basedir ]
+    then
+	mkdir $basedir
+    fi
+}
+
+
+run_test() {
+    local test=$1
+    local version=$2
+
+    ensure_dir $OUTPUT_DIR/$version/$test
+    echo "  version: $version"
+    echo "    LD_LIBRARY_PATH=clFFT_$version/build/library clFFT_$version/$TEST_PROGRAM \\"
+    echo "        --seed=212438907  --gtest_print_time=0 --gtest_filter=$test* "
+    LD_LIBRARY_PATH=clFFT_$version/build/library \
+		   clFFT_$version/$TEST_PROGRAM -v \
+		   --seed=212438907  --gtest_print_time=0 \
+		   --gtest_filter=$test* \
+		   > $OUTPUT_DIR/$version/$test.out 2> /dev/null
+}
+
+run_tests() {
+    local test=$1
+
+    echo Running test $test
+    
+    for version in $OLD $NEW
+    do
+	run_test $test $version
+    done
+
+    echo $test >> $PROCESSED
+}
+
+
+for i in `cat $TESTS`
+do
+    if grep -q $i $PROCESSED
+    then
+	echo already did $i
+    else
+	run_tests $i
+    fi
+done
+	 

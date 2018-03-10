@@ -1,0 +1,21 @@
+#!/bin/bash
+
+source ./scripts/common.bash
+
+verify_test() {
+    local test=$1
+    echo "verify test $test [y/n]?"
+    local answer=n
+    read answer
+    if [ "$answer" = y ]
+    then
+	vimdiff $OUTPUT_DIR/$OLD/$1.out $OUTPUT_DIR/$NEW/$1.out
+    fi
+}
+
+
+for i in `cat $PROCESSED`
+do
+    verify_test $i
+done
+	 
