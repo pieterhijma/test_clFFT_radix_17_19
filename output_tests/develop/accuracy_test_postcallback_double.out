@@ -1,0 +1,922 @@
+
+clFFT client API version:  2.15.0
+clFFT runtime version:     2.15.0
+
+    CL_PLATFORM_PROFILE:     FULL_PROFILE
+    CL_PLATFORM_VERSION:     OpenCL 1.2 CUDA 9.0.282
+    CL_PLATFORM_NAME:        NVIDIA CUDA
+    CL_PLATFORM_VENDOR:      NVIDIA Corporation
+    CL_PLATFORM_EXTENSIONS:  cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+    CL_DEVICE_NAME:                      TITAN X (Pascal)
+    CL_DEVICE_VERSION:                   OpenCL 1.2 CUDA
+    CL_DRIVER_VERSION:                   384.111
+    CL_DEVICE_TYPE:                      GPU
+    CL_DEVICE_MAX_CLOCK_FREQUENCY:       1531
+    CL_DEVICE_ADDRESS_BITS:              64
+    CL_DEVICE_AVAILABLE:                 TRUE
+    CL_DEVICE_COMPILER_AVAILABLE:        TRUE
+    CL_DEVICE_OPENCL_C_VERSION:          OpenCL C 1.2 
+    CL_DEVICE_MAX_WORK_GROUP_SIZE:       1024
+    CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS:  3
+                         Dimension[ 0 ]  1024
+                         Dimension[ 1 ]  1024
+                         Dimension[ 2 ]  64
+    CL_DEVICE_HOST_UNIFIED_MEMORY:       FALSE
+    CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE:  65536 ( 64 KB )
+    CL_DEVICE_LOCAL_MEM_SIZE:            49152 ( 48 KB )
+    CL_DEVICE_GLOBAL_MEM_SIZE:           12782075904 ( 12189 MB )
+    CL_DEVICE_MAX_MEM_ALLOC_SIZE:        3195518976 ( 3047 MB )
+    CL_DEVICE_EXTENSIONS:                cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+Result comparison tolerance is 0.001
+Result comparison RMSE relative tolerance is 2e-05
+Random test's seed is 212438907
+Note: Google Test filter = accuracy_test_postcallback_double*
+[==========] Running 86 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 86 tests from accuracy_test_postcallback_double
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 1024
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 1024
+output distance: 1024
+[       OK ] accuracy_test_postcallback_double.pow2_normal_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_backward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 1024
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 1024
+output distance: 1024
+[       OK ] accuracy_test_postcallback_double.pow2_normal_1D_backward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_forward_out_of_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 1024
+batch: 1
+double precision
+out-of-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 1024
+output distance: 1024
+[       OK ] accuracy_test_postcallback_double.pow2_normal_1D_forward_out_of_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_forward_out_of_place_complex_planar_to_complex_planar
+transform parameters as seen by clfft:
+1 dimension(s): 1024
+batch: 1
+double precision
+out-of-place
+complex planar -> complex planar
+input stride(s): 1
+output stride(s): 1
+input distance: 1024
+output distance: 1024
+[       OK ] accuracy_test_postcallback_double.pow2_normal_1D_forward_out_of_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_forward_in_place_complex_planar_to_complex_planar
+transform parameters as seen by clfft:
+1 dimension(s): 1024
+batch: 1
+double precision
+in-place
+complex planar -> complex planar
+input stride(s): 1
+output stride(s): 1
+input distance: 1024
+output distance: 1024
+[       OK ] accuracy_test_postcallback_double.pow2_normal_1D_forward_in_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_verysmall_forward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 2
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 2
+output distance: 2
+[       OK ] accuracy_test_postcallback_double.pow2_normal_1D_verysmall_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_non_unit_stride_and_distance_complex_to_complex
+transform parameters as seen by clfft:
+1 dimension(s): 1024
+batch: 2
+double precision
+out-of-place
+complex planar -> complex interleaved
+input stride(s): 42
+output stride(s): 42
+input distance: 43022
+output distance: 43022
+[       OK ] accuracy_test_postcallback_double.pow2_normal_1D_non_unit_stride_and_distance_complex_to_complex
+[ RUN      ] accuracy_test_postcallback_double.mixed_normal_1D_val_forward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 100
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 100
+output distance: 100
+[       OK ] accuracy_test_postcallback_double.mixed_normal_1D_val_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow3_normal_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 729
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 729
+output distance: 729
+[       OK ] accuracy_test_postcallback_double.pow3_normal_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow3_small_1D_forward_in_place_complex_planar_to_complex_planar
+transform parameters as seen by clfft:
+1 dimension(s): 9
+batch: 1
+double precision
+in-place
+complex planar -> complex planar
+input stride(s): 1
+output stride(s): 1
+input distance: 9
+output distance: 9
+[       OK ] accuracy_test_postcallback_double.pow3_small_1D_forward_in_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow5_normal_1D_forward_out_of_place_complex_interleaved_to_complex_planar
+transform parameters as seen by clfft:
+1 dimension(s): 625
+batch: 1
+double precision
+out-of-place
+complex interleaved -> complex planar
+input stride(s): 1
+output stride(s): 1
+input distance: 625
+output distance: 625
+[       OK ] accuracy_test_postcallback_double.pow5_normal_1D_forward_out_of_place_complex_interleaved_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 8192
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 8192
+output distance: 8192
+
+RMSE accuracy judgement failure -- RMSE = 1.3663, maximum allowed RMSE = 2.82843e-05
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/accuracy_test_common.h:291: Failure
+Value of: test_fft.result() == reference.result()
+  Actual: false
+Expected: true
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_backward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 8192
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 8192
+output distance: 8192
+
+RMSE accuracy judgement failure -- RMSE = 1.3663, maximum allowed RMSE = 2.82843e-05
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/accuracy_test_common.h:291: Failure
+Value of: test_fft.result() == reference.result()
+  Actual: false
+Expected: true
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_backward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_withEndTranpose_forward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 131072
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 131072
+output distance: 131072
+
+RMSE accuracy judgement failure -- RMSE = 0.0805074, maximum allowed RMSE = 0.000113137
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/accuracy_test_common.h:291: Failure
+Value of: test_fft.result() == reference.result()
+  Actual: false
+Expected: true
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_withEndTranpose_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_forward_in_place_complex_planar_to_complex_planar
+transform parameters as seen by clfft:
+1 dimension(s): 8192
+batch: 1
+double precision
+in-place
+complex planar -> complex planar
+input stride(s): 1
+output stride(s): 1
+input distance: 8192
+output distance: 8192
+
+RMSE accuracy judgement failure -- RMSE = 1.35233, maximum allowed RMSE = 2.82843e-05
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/accuracy_test_common.h:291: Failure
+Value of: test_fft.result() == reference.result()
+  Actual: false
+Expected: true
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_forward_in_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_withEndTranpose_forward_out_of_place_complex_planar_to_complex_planar
+transform parameters as seen by clfft:
+1 dimension(s): 131072
+batch: 1
+double precision
+out-of-place
+complex planar -> complex planar
+input stride(s): 1
+output stride(s): 1
+input distance: 131072
+output distance: 131072
+[       OK ] accuracy_test_postcallback_double.pow2_large_1D_withEndTranpose_forward_out_of_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_16M_forward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 16777216
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 16777216
+output distance: 16777216
+
+RMSE accuracy judgement failure -- RMSE = 1.2799, maximum allowed RMSE = 0.00128
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/accuracy_test_common.h:291: Failure
+Value of: test_fft.result() == reference.result()
+  Actual: false
+Expected: true
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_16M_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_1M_forward_in_place_complex_planar_to_complex_planar
+transform parameters as seen by clfft:
+1 dimension(s): 1048576
+batch: 1
+double precision
+in-place
+complex planar -> complex planar
+input stride(s): 1
+output stride(s): 1
+input distance: 1048576
+output distance: 1048576
+
+RMSE accuracy judgement failure -- RMSE = 1.3111, maximum allowed RMSE = 0.00032
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/accuracy_test_common.h:291: Failure
+Value of: test_fft.result() == reference.result()
+  Actual: false
+Expected: true
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_1M_forward_in_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow3_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+transform parameters as seen by clfft:
+1 dimension(s): 6561
+batch: 1
+double precision
+in-place
+complex interleaved -> complex interleaved
+input stride(s): 1
+output stride(s): 1
+input distance: 6561
+output distance: 6561
+Exception occurred during clfftEnqueueTransform/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/cl_transform.h935
+--- Exception caught ---
+Data set is too large for this device -- skipping test
+[       OK ] accuracy_test_postcallback_double.pow3_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow5_small_1D_backward_in_place_complex_interleaved_to_complex_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_small_1D_backward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow5_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow5_large_1D_forward_in_place_complex_planar_to_complex_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_1D_forward_in_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow7_normal_1D_backward_out_of_place_complex_planar_to_complex_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow7_normal_1D_backward_out_of_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow7_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow7_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_2D_array_complex_to_complex_with_odd_batch_size
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_array_complex_to_complex_with_odd_batch_size
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_2D_forward_in_place_complex_interleaved_to_complex_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_small_2D_forward_out_of_place_complex_interleaved_to_complex_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_2D_forward_out_of_place_complex_interleaved_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_2D_backward_in_place_complex_planar_to_complex_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_2D_backward_in_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow3_normal_2D_forward_in_place_complex_interleaved_to_complex_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_2D_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow5_large_2D_backward_out_of_place_complex_planar_to_complex_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_2D_backward_out_of_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow7_small_2D_backward_out_of_place_complex_interleaved_to_complex_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow7_small_2D_backward_out_of_place_complex_interleaved_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_3D_forward_in_place_complex_interleaved_to_complex_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_3D_forward_in_place_complex_interleaved_to_complex_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow3_normal_3D_forward_in_place_complex_planar_to_complex_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_3D_forward_in_place_complex_planar_to_complex_planar
+[ RUN      ] accuracy_test_postcallback_double.pre_and_post_callback_normal_complex_to_complex
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pre_and_post_callback_normal_complex_to_complex
+[ RUN      ] accuracy_test_postcallback_double.pre_and_post_callback_singlepass_complex_to_complex
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pre_and_post_callback_singlepass_complex_to_complex
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_out_of_place_real_to_hermitian_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_out_of_place_real_to_hermitian_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_small_1D_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_1D_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_array_real_to_hermitian
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_array_real_to_hermitian
+[ RUN      ] accuracy_test_postcallback_double.pow2_very_small_1D_out_of_place_different_input_output_non_unit_stride_and_distance_real_to_complex
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_very_small_1D_out_of_place_different_input_output_non_unit_stride_and_distance_real_to_complex
+[ RUN      ] accuracy_test_postcallback_double.pow3_normal_1D_out_of_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_1D_out_of_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow5_normal_1D_array_real_to_hermitian_with_odd_batch_size
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_normal_1D_array_real_to_hermitian_with_odd_batch_size
+[ RUN      ] accuracy_test_postcallback_double.pow5_normal_1D_out_of_place_real_to_hermitian_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_normal_1D_out_of_place_real_to_hermitian_planar
+[ RUN      ] accuracy_test_postcallback_double.pow7_small_1D_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow7_small_1D_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_4M_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_4M_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_4M_out_of_place_real_to_hermitian_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_4M_out_of_place_real_to_hermitian_planar
+[ RUN      ] accuracy_test_postcallback_double.pow3_large_1D_out_of_place_real_to_hermitian_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_1D_out_of_place_real_to_hermitian_planar
+[ RUN      ] accuracy_test_postcallback_double.pow3_large_1D_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_1D_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow3_large_1D_out_of_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_1D_out_of_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow5_large_1D_out_of_place_real_to_hermitian_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_1D_out_of_place_real_to_hermitian_planar
+[ RUN      ] accuracy_test_postcallback_double.pow7_large_1D_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow7_large_1D_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_2D_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_2D_out_of_place_real_to_hermitian_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_out_of_place_real_to_hermitian_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_small_2D_array_real_to_hermitian
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_2D_array_real_to_hermitian
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_2D_out_of_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_2D_out_of_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_small_2D_non_unit_stride_and_distance_real_to_hermitian
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_2D_non_unit_stride_and_distance_real_to_hermitian
+[ RUN      ] accuracy_test_postcallback_double.pow3_normal_2D_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_2D_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow5_large_2D_out_of_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_2D_out_of_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow7_small_2D_non_unit_stride_and_distance_real_to_hermitian
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow7_small_2D_non_unit_stride_and_distance_real_to_hermitian
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_3D_in_place_real_to_hermitian_interleaved
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_3D_in_place_real_to_hermitian_interleaved
+[ RUN      ] accuracy_test_postcallback_double.pow2_small_3D_non_unit_stride_and_distance_real_to_hermitian
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_3D_non_unit_stride_and_distance_real_to_hermitian
+[ RUN      ] accuracy_test_postcallback_double.pow3_large_3D_out_of_place_real_to_hermitian_planar
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_3D_out_of_place_real_to_hermitian_planar
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_in_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_in_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_out_of_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_out_of_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_out_of_place_hermitian_planar_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_out_of_place_hermitian_planar_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_1D_user_defined_scale_hermitian_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_user_defined_scale_hermitian_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_small_1D_non_unit_stride_hermitian_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_1D_non_unit_stride_hermitian_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow3_normal_1D_out_of_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_1D_out_of_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow5_small_1D_out_of_place_hermitian_planar_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_small_1D_out_of_place_hermitian_planar_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow7_normal_1D_in_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow7_normal_1D_in_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_in_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_in_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_out_of_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_out_of_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_large_1D_out_of_place_hermitian_planar_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_out_of_place_hermitian_planar_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow3_large_1D_in_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_1D_in_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow5_large_1D_out_of_place_hermitian_planar_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_1D_out_of_place_hermitian_planar_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow7_large_1D_out_of_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow7_large_1D_out_of_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_2D_in_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_in_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_small_2D_non_unit_stride_and_distance_hermitian_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_2D_non_unit_stride_and_distance_hermitian_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow3_normal_2D_out_of_place_hermitian_planar_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_2D_out_of_place_hermitian_planar_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow5_large_2D_out_of_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_2D_out_of_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow7_small_2D_in_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow7_small_2D_in_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_normal_3D_in_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_3D_in_place_hermitian_interleaved_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow2_small_3D_non_unit_stride_and_distance_hermitian_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_3D_non_unit_stride_and_distance_hermitian_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow3_normal_3D_out_of_place_hermitian_planar_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_3D_out_of_place_hermitian_planar_to_real
+[ RUN      ] accuracy_test_postcallback_double.pow5_large_3D_out_of_place_hermitian_interleaved_to_real
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_develop/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_3D_out_of_place_hermitian_interleaved_to_real
+[----------] Global test environment tear-down
+[==========] 86 tests from 1 test case ran.
+[  PASSED  ] 13 tests.
+[  FAILED  ] 73 tests, listed below:
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_backward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_withEndTranpose_forward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_forward_in_place_complex_planar_to_complex_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_16M_forward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_1M_forward_in_place_complex_planar_to_complex_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow5_small_1D_backward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_1D_forward_in_place_complex_planar_to_complex_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow7_normal_1D_backward_out_of_place_complex_planar_to_complex_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow7_large_1D_forward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_array_complex_to_complex_with_odd_batch_size
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_forward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_2D_forward_out_of_place_complex_interleaved_to_complex_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_2D_backward_in_place_complex_planar_to_complex_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_2D_forward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_2D_backward_out_of_place_complex_planar_to_complex_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow7_small_2D_backward_out_of_place_complex_interleaved_to_complex_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_3D_forward_in_place_complex_interleaved_to_complex_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_3D_forward_in_place_complex_planar_to_complex_planar
+[  FAILED  ] accuracy_test_postcallback_double.pre_and_post_callback_normal_complex_to_complex
+[  FAILED  ] accuracy_test_postcallback_double.pre_and_post_callback_singlepass_complex_to_complex
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_out_of_place_real_to_hermitian_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_1D_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_array_real_to_hermitian
+[  FAILED  ] accuracy_test_postcallback_double.pow2_very_small_1D_out_of_place_different_input_output_non_unit_stride_and_distance_real_to_complex
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_1D_out_of_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow5_normal_1D_array_real_to_hermitian_with_odd_batch_size
+[  FAILED  ] accuracy_test_postcallback_double.pow5_normal_1D_out_of_place_real_to_hermitian_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow7_small_1D_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_4M_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_4M_out_of_place_real_to_hermitian_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_1D_out_of_place_real_to_hermitian_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_1D_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_1D_out_of_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_1D_out_of_place_real_to_hermitian_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow7_large_1D_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_out_of_place_real_to_hermitian_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_2D_array_real_to_hermitian
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_2D_out_of_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_2D_non_unit_stride_and_distance_real_to_hermitian
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_2D_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_2D_out_of_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow7_small_2D_non_unit_stride_and_distance_real_to_hermitian
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_3D_in_place_real_to_hermitian_interleaved
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_3D_non_unit_stride_and_distance_real_to_hermitian
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_3D_out_of_place_real_to_hermitian_planar
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_in_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_out_of_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_out_of_place_hermitian_planar_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_1D_user_defined_scale_hermitian_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_1D_non_unit_stride_hermitian_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_1D_out_of_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow5_small_1D_out_of_place_hermitian_planar_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow7_normal_1D_in_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_in_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_out_of_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_large_1D_out_of_place_hermitian_planar_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow3_large_1D_in_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_1D_out_of_place_hermitian_planar_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow7_large_1D_out_of_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_2D_in_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_2D_non_unit_stride_and_distance_hermitian_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_2D_out_of_place_hermitian_planar_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_2D_out_of_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow7_small_2D_in_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_normal_3D_in_place_hermitian_interleaved_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow2_small_3D_non_unit_stride_and_distance_hermitian_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow3_normal_3D_out_of_place_hermitian_planar_to_real
+[  FAILED  ] accuracy_test_postcallback_double.pow5_large_3D_out_of_place_hermitian_interleaved_to_real
+
+73 FAILED TESTS
+  YOU HAVE 24 DISABLED TESTS
+

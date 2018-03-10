@@ -1,0 +1,175 @@
+
+clFFT client API version:  2.15.0
+clFFT runtime version:     2.15.0
+
+    CL_PLATFORM_PROFILE:     FULL_PROFILE
+    CL_PLATFORM_VERSION:     OpenCL 1.2 CUDA 9.0.282
+    CL_PLATFORM_NAME:        NVIDIA CUDA
+    CL_PLATFORM_VENDOR:      NVIDIA Corporation
+    CL_PLATFORM_EXTENSIONS:  cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+    CL_DEVICE_NAME:                      TITAN X (Pascal)
+    CL_DEVICE_VERSION:                   OpenCL 1.2 CUDA
+    CL_DRIVER_VERSION:                   384.111
+    CL_DEVICE_TYPE:                      GPU
+    CL_DEVICE_MAX_CLOCK_FREQUENCY:       1531
+    CL_DEVICE_ADDRESS_BITS:              64
+    CL_DEVICE_AVAILABLE:                 TRUE
+    CL_DEVICE_COMPILER_AVAILABLE:        TRUE
+    CL_DEVICE_OPENCL_C_VERSION:          OpenCL C 1.2 
+    CL_DEVICE_MAX_WORK_GROUP_SIZE:       1024
+    CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS:  3
+                         Dimension[ 0 ]  1024
+                         Dimension[ 1 ]  1024
+                         Dimension[ 2 ]  64
+    CL_DEVICE_HOST_UNIFIED_MEMORY:       FALSE
+    CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE:  65536 ( 64 KB )
+    CL_DEVICE_LOCAL_MEM_SIZE:            49152 ( 48 KB )
+    CL_DEVICE_GLOBAL_MEM_SIZE:           12782075904 ( 12189 MB )
+    CL_DEVICE_MAX_MEM_ALLOC_SIZE:        3195518976 ( 3047 MB )
+    CL_DEVICE_EXTENSIONS:                cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+Result comparison tolerance is 0.001
+Result comparison RMSE relative tolerance is 2e-05
+Random test's seed is 212438907
+Note: Google Test filter = clfft_UnitTest*
+[==========] Running 67 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 67 tests from clfft_UnitTest
+[ RUN      ] clfft_UnitTest.get_plan_context_should_get_a_context
+[       OK ] clfft_UnitTest.get_plan_context_should_get_a_context
+[ RUN      ] clfft_UnitTest.copyPlan_should_copy_plan
+[       OK ] clfft_UnitTest.copyPlan_should_copy_plan
+[ RUN      ] clfft_UnitTest.copyPlan_should_increase_context_reference_count
+[       OK ] clfft_UnitTest.copyPlan_should_increase_context_reference_count
+[ RUN      ] clfft_UnitTest.getPlanBatchSize_should_yield_appropriate_values
+[       OK ] clfft_UnitTest.getPlanBatchSize_should_yield_appropriate_values
+[ RUN      ] clfft_UnitTest.setPlanBatchSize_should_set_batch_size_correctly
+[       OK ] clfft_UnitTest.setPlanBatchSize_should_set_batch_size_correctly
+[ RUN      ] clfft_UnitTest.getPlanPrecision_should_yield_appropriate_values
+[       OK ] clfft_UnitTest.getPlanPrecision_should_yield_appropriate_values
+[ RUN      ] clfft_UnitTest.setPlanPrecision_should_set_precision_to_supported_values
+[       OK ] clfft_UnitTest.setPlanPrecision_should_set_precision_to_supported_values
+[ RUN      ] clfft_UnitTest.setPlanPrecision_should_fail_to_set_unsupported_values
+[       OK ] clfft_UnitTest.setPlanPrecision_should_fail_to_set_unsupported_values
+[ RUN      ] clfft_UnitTest.getPlanScale_should_yield_appropriate_values
+[       OK ] clfft_UnitTest.getPlanScale_should_yield_appropriate_values
+[ RUN      ] clfft_UnitTest.getPlanScale_should_fail_on_invalid_direction
+[       OK ] clfft_UnitTest.getPlanScale_should_fail_on_invalid_direction
+[ RUN      ] clfft_UnitTest.setPlanScale_should_set_scale_correctly
+[       OK ] clfft_UnitTest.setPlanScale_should_set_scale_correctly
+[ RUN      ] clfft_UnitTest.setPlanScale_should_fail_on_invalid_direction
+[       OK ] clfft_UnitTest.setPlanScale_should_fail_on_invalid_direction
+[ RUN      ] clfft_UnitTest.setPlanDimLength_should_set_dimensions_to_supported_values
+[       OK ] clfft_UnitTest.setPlanDimLength_should_set_dimensions_to_supported_values
+[ RUN      ] clfft_UnitTest.setPlanDimLength_should_fail_if_a_length_is_set_to_zero
+[       OK ] clfft_UnitTest.setPlanDimLength_should_fail_if_a_length_is_set_to_zero
+[ RUN      ] clfft_UnitTest.setPlanDimLength_should_fail_on_radices_that_have_non_supported_factors
+[       OK ] clfft_UnitTest.setPlanDimLength_should_fail_on_radices_that_have_non_supported_factors
+[ RUN      ] clfft_UnitTest.setPlanDimLength_should_set_values_to_second_set_when_called_twice
+[       OK ] clfft_UnitTest.setPlanDimLength_should_set_values_to_second_set_when_called_twice
+[ RUN      ] clfft_UnitTest.getPlanDimLength_should_yield_correct_values
+[       OK ] clfft_UnitTest.getPlanDimLength_should_yield_correct_values
+[ RUN      ] clfft_UnitTest.getPlanLength_should_fail_when_passed_null_pointer
+[       OK ] clfft_UnitTest.getPlanLength_should_fail_when_passed_null_pointer
+[ RUN      ] clfft_UnitTest.getPlanInStride_should_fail_when_passed_null_pointer
+[       OK ] clfft_UnitTest.getPlanInStride_should_fail_when_passed_null_pointer
+[ RUN      ] clfft_UnitTest.getPlanOutStride_should_fail_when_passed_null_pointer
+[       OK ] clfft_UnitTest.getPlanOutStride_should_fail_when_passed_null_pointer
+[ RUN      ] clfft_UnitTest.createDefaultPlan_should_fail_when_passed_null_pointer
+[       OK ] clfft_UnitTest.createDefaultPlan_should_fail_when_passed_null_pointer
+[ RUN      ] clfft_UnitTest.createDefaultPlan_should_fail_when_passed_length_of_0
+[       OK ] clfft_UnitTest.createDefaultPlan_should_fail_when_passed_length_of_0
+[ RUN      ] clfft_UnitTest.createDefaultPlan_should_fail_when_passed_invalid_dimension
+[       OK ] clfft_UnitTest.createDefaultPlan_should_fail_when_passed_invalid_dimension
+[ RUN      ] clfft_UnitTest.createDefaultPlan_should_fail_when_passed_unsupported_length
+[       OK ] clfft_UnitTest.createDefaultPlan_should_fail_when_passed_unsupported_length
+[ RUN      ] clfft_UnitTest.setPlanInStride_should_set_input_strides_to_supported_values
+[       OK ] clfft_UnitTest.setPlanInStride_should_set_input_strides_to_supported_values
+[ RUN      ] clfft_UnitTest.getPlanInStride_should_yield_correct_values
+[       OK ] clfft_UnitTest.getPlanInStride_should_yield_correct_values
+[ RUN      ] clfft_UnitTest.setPlanOutStride_should_set_output_strides_to_supported_values
+[       OK ] clfft_UnitTest.setPlanOutStride_should_set_output_strides_to_supported_values
+[ RUN      ] clfft_UnitTest.getPlanOutStride_should_yield_correct_values
+[       OK ] clfft_UnitTest.getPlanOutStride_should_yield_correct_values
+[ RUN      ] clfft_UnitTest.setPlanDistance_should_set_distance_to_supported_values
+[       OK ] clfft_UnitTest.setPlanDistance_should_set_distance_to_supported_values
+[ RUN      ] clfft_UnitTest.setPlanDistance_should_fail_to_set_pitch_to_smaller_than_one_dataset
+[       OK ] clfft_UnitTest.setPlanDistance_should_fail_to_set_pitch_to_smaller_than_one_dataset
+[ RUN      ] clfft_UnitTest.getPlanDistance_should_yield_correct_values
+[       OK ] clfft_UnitTest.getPlanDistance_should_yield_correct_values
+[ RUN      ] clfft_UnitTest.setLayout_and_getLayout_should_set_and_get_layouts_respectively
+[       OK ] clfft_UnitTest.setLayout_and_getLayout_should_set_and_get_layouts_respectively
+[ RUN      ] clfft_UnitTest.setLayout_should_fail_on_invalid_argument_values
+[       OK ] clfft_UnitTest.setLayout_should_fail_on_invalid_argument_values
+[ RUN      ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_1
+[       OK ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_1
+[ RUN      ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_2
+[       OK ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_2
+[ RUN      ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_3
+[       OK ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_3
+[ RUN      ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_4
+[       OK ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_4
+[ RUN      ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_5
+[       OK ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_5
+[ RUN      ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_6
+[       OK ] clfft_UnitTest.valid_layout_combinations_for_real_to_complex_should_succeed_on_bake_6
+[ RUN      ] clfft_UnitTest.invalid_layout_combinations_for_real_to_complex_should_fail
+[       OK ] clfft_UnitTest.invalid_layout_combinations_for_real_to_complex_should_fail
+[ RUN      ] clfft_UnitTest.real_to_planar_should_fail_on_bake
+[       OK ] clfft_UnitTest.real_to_planar_should_fail_on_bake
+[ RUN      ] clfft_UnitTest.planar_to_real_should_fail_on_bake
+[       OK ] clfft_UnitTest.planar_to_real_should_fail_on_bake
+[ RUN      ] clfft_UnitTest.setResultLocation_should_set_placeness_to_supported_values
+[       OK ] clfft_UnitTest.setResultLocation_should_set_placeness_to_supported_values
+[ RUN      ] clfft_UnitTest.setResultLocation_should_fail_on_invalid_argument_values
+[       OK ] clfft_UnitTest.setResultLocation_should_fail_on_invalid_argument_values
+[ RUN      ] clfft_UnitTest.getResultLocation_should_yield_correct_values
+[       OK ] clfft_UnitTest.getResultLocation_should_yield_correct_values
+[ RUN      ] clfft_UnitTest.SetPlanTransposeResult_should_set_resulttransposed_to_supported_values
+[       OK ] clfft_UnitTest.SetPlanTransposeResult_should_set_resulttransposed_to_supported_values
+[ RUN      ] clfft_UnitTest.setPlanTransposeResult_should_fail_on_invalid_argument_values
+[       OK ] clfft_UnitTest.setPlanTransposeResult_should_fail_on_invalid_argument_values
+[ RUN      ] clfft_UnitTest.getPlanTransposeResult_should_yield_correct_values
+[       OK ] clfft_UnitTest.getPlanTransposeResult_should_yield_correct_values
+[ RUN      ] clfft_UnitTest.getTmpBufSize_should_fail_on_unbaked_plan
+[       OK ] clfft_UnitTest.getTmpBufSize_should_fail_on_unbaked_plan
+[ RUN      ] clfft_UnitTest.getTmpBufSize_should_succeed_on_baked_plan
+[       OK ] clfft_UnitTest.getTmpBufSize_should_succeed_on_baked_plan
+[ RUN      ] clfft_UnitTest.bake_plan_should_fail_to_bake_multi_GPU_plan
+[       OK ] clfft_UnitTest.bake_plan_should_fail_to_bake_multi_GPU_plan
+[ RUN      ] clfft_UnitTest.bake_plan_should_fail_on_non_null_function_pointer
+[       OK ] clfft_UnitTest.bake_plan_should_fail_on_non_null_function_pointer
+[ RUN      ] clfft_UnitTest.bake_plan_should_fail_on_non_null_user_data
+[       OK ] clfft_UnitTest.bake_plan_should_fail_on_non_null_user_data
+[ RUN      ] clfft_UnitTest.set_dimension_should_fail_on_invalid_value
+[       OK ] clfft_UnitTest.set_dimension_should_fail_on_invalid_value
+[ RUN      ] clfft_UnitTest.set_precision_should_fail_on_invalid_value
+[       OK ] clfft_UnitTest.set_precision_should_fail_on_invalid_value
+[ RUN      ] clfft_UnitTest.set_length_should_fail_on_null_pointer
+[       OK ] clfft_UnitTest.set_length_should_fail_on_null_pointer
+[ RUN      ] clfft_UnitTest.set_length_should_fail_on_invalid_dimension
+[       OK ] clfft_UnitTest.set_length_should_fail_on_invalid_dimension
+[ RUN      ] clfft_UnitTest.get_length_should_fail_on_invalid_dimension
+[       OK ] clfft_UnitTest.get_length_should_fail_on_invalid_dimension
+[ RUN      ] clfft_UnitTest.set_in_stride_should_fail_on_null_pointer
+[       OK ] clfft_UnitTest.set_in_stride_should_fail_on_null_pointer
+[ RUN      ] clfft_UnitTest.set_in_stride_should_fail_on_invalid_dimension
+[       OK ] clfft_UnitTest.set_in_stride_should_fail_on_invalid_dimension
+[ RUN      ] clfft_UnitTest.get_in_stride_should_fail_on_invalid_dimension
+[       OK ] clfft_UnitTest.get_in_stride_should_fail_on_invalid_dimension
+[ RUN      ] clfft_UnitTest.set_out_stride_should_fail_on_null_pointer
+[       OK ] clfft_UnitTest.set_out_stride_should_fail_on_null_pointer
+[ RUN      ] clfft_UnitTest.set_out_stride_should_fail_on_invalid_dimension
+[       OK ] clfft_UnitTest.set_out_stride_should_fail_on_invalid_dimension
+[ RUN      ] clfft_UnitTest.get_out_stride_should_fail_on_invalid_dimension
+[       OK ] clfft_UnitTest.get_out_stride_should_fail_on_invalid_dimension
+[ RUN      ] clfft_UnitTest.enqueue_transform_should_fail_with_num_queues_and_events_greater_than_1
+[       OK ] clfft_UnitTest.enqueue_transform_should_fail_with_num_queues_and_events_greater_than_1
+[ RUN      ] clfft_UnitTest.get_version_should_get_a_version_number
+[       OK ] clfft_UnitTest.get_version_should_get_a_version_number
+[ RUN      ] clfft_UnitTest.setup_should_succeed_given_a_setup_data_pointer
+[       OK ] clfft_UnitTest.setup_should_succeed_given_a_setup_data_pointer
+[----------] Global test environment tear-down
+[==========] 67 tests from 1 test case ran.
+[  PASSED  ] 67 tests.

@@ -1,0 +1,111 @@
+
+clFFT client API version:  2.15.0
+clFFT runtime version:     2.15.0
+
+    CL_PLATFORM_PROFILE:     FULL_PROFILE
+    CL_PLATFORM_VERSION:     OpenCL 1.2 CUDA 9.0.282
+    CL_PLATFORM_NAME:        NVIDIA CUDA
+    CL_PLATFORM_VENDOR:      NVIDIA Corporation
+    CL_PLATFORM_EXTENSIONS:  cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+    CL_DEVICE_NAME:                      TITAN X (Pascal)
+    CL_DEVICE_VERSION:                   OpenCL 1.2 CUDA
+    CL_DRIVER_VERSION:                   384.111
+    CL_DEVICE_TYPE:                      GPU
+    CL_DEVICE_MAX_CLOCK_FREQUENCY:       1531
+    CL_DEVICE_ADDRESS_BITS:              64
+    CL_DEVICE_AVAILABLE:                 TRUE
+    CL_DEVICE_COMPILER_AVAILABLE:        TRUE
+    CL_DEVICE_OPENCL_C_VERSION:          OpenCL C 1.2 
+    CL_DEVICE_MAX_WORK_GROUP_SIZE:       1024
+    CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS:  3
+                         Dimension[ 0 ]  1024
+                         Dimension[ 1 ]  1024
+                         Dimension[ 2 ]  64
+    CL_DEVICE_HOST_UNIFIED_MEMORY:       FALSE
+    CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE:  65536 ( 64 KB )
+    CL_DEVICE_LOCAL_MEM_SIZE:            49152 ( 48 KB )
+    CL_DEVICE_GLOBAL_MEM_SIZE:           12782075904 ( 12189 MB )
+    CL_DEVICE_MAX_MEM_ALLOC_SIZE:        3195518976 ( 3047 MB )
+    CL_DEVICE_EXTENSIONS:                cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+Result comparison tolerance is 0.001
+Result comparison RMSE relative tolerance is 2e-05
+Random test's seed is 212438907
+Note: Google Test filter = accuracy_test_mixed_double*
+[==========] Running 6 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 6 tests from accuracy_test_mixed_double
+[ RUN      ] accuracy_test_mixed_double.hermitian_to_real_transforms_with_non_unit_output_strides_should_pass
+transform parameters as seen by clfft:
+1 dimension(s): 10
+batch: 1
+double precision
+out-of-place
+hermitian planar -> real
+input stride(s): 1
+output stride(s): 2
+input distance: 6
+output distance: 20
+[       OK ] accuracy_test_mixed_double.hermitian_to_real_transforms_with_non_unit_output_strides_should_pass
+[ RUN      ] accuracy_test_mixed_double.hermitian_to_real_transforms_with_non_unit_input_strides_should_pass
+transform parameters as seen by clfft:
+2 dimension(s): 6 67500
+batch: 1
+double precision
+out-of-place
+hermitian planar -> real
+input stride(s): 2 12
+output stride(s): 1 6
+input distance: 810074
+output distance: 405000
+Exception occurred during clfftEnqueueTransform/home/pieter/clFFT_radix_17_19/clFFT_radix_17_19/src/tests/cl_transform.h935
+--- Exception caught ---
+Unrecognized exception: 
+Error code not defined
+/home/pieter/clFFT_radix_17_19/clFFT_radix_17_19/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_mixed_double.hermitian_to_real_transforms_with_non_unit_input_strides_should_pass
+[ RUN      ] accuracy_test_mixed_double.small_targeted_real_to_hermitian_transform
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_radix_17_19/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_mixed_double.small_targeted_real_to_hermitian_transform
+[ RUN      ] accuracy_test_mixed_double.larger_targeted_real_to_hermitian_transform
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_radix_17_19/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_mixed_double.larger_targeted_real_to_hermitian_transform
+[ RUN      ] accuracy_test_mixed_double.another_targeted_real_to_hermitian_transform
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_radix_17_19/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_mixed_double.another_targeted_real_to_hermitian_transform
+[ RUN      ] accuracy_test_mixed_double.possible_driver_bug_1D_length_375_fails
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+--- Exception caught ---
+Unrecognized exception: 
+OPENCL_V_THROWERROR< Error code not defined > (472): Creating Context ( ::clCreateContextFromType() )
+/home/pieter/clFFT_radix_17_19/clFFT_radix_17_19/src/tests/test_constants.cpp:80: Failure
+Failed
+[  FAILED  ] accuracy_test_mixed_double.possible_driver_bug_1D_length_375_fails
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test case ran.
+[  PASSED  ] 1 test.
+[  FAILED  ] 5 tests, listed below:
+[  FAILED  ] accuracy_test_mixed_double.hermitian_to_real_transforms_with_non_unit_input_strides_should_pass
+[  FAILED  ] accuracy_test_mixed_double.small_targeted_real_to_hermitian_transform
+[  FAILED  ] accuracy_test_mixed_double.larger_targeted_real_to_hermitian_transform
+[  FAILED  ] accuracy_test_mixed_double.another_targeted_real_to_hermitian_transform
+[  FAILED  ] accuracy_test_mixed_double.possible_driver_bug_1D_length_375_fails
+
+ 5 FAILED TESTS

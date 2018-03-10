@@ -1,0 +1,38 @@
+
+clFFT client API version:  2.15.0
+clFFT runtime version:     2.15.0
+
+    CL_PLATFORM_PROFILE:     FULL_PROFILE
+    CL_PLATFORM_VERSION:     OpenCL 1.2 CUDA 9.0.282
+    CL_PLATFORM_NAME:        NVIDIA CUDA
+    CL_PLATFORM_VENDOR:      NVIDIA Corporation
+    CL_PLATFORM_EXTENSIONS:  cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+    CL_DEVICE_NAME:                      TITAN X (Pascal)
+    CL_DEVICE_VERSION:                   OpenCL 1.2 CUDA
+    CL_DRIVER_VERSION:                   384.111
+    CL_DEVICE_TYPE:                      GPU
+    CL_DEVICE_MAX_CLOCK_FREQUENCY:       1531
+    CL_DEVICE_ADDRESS_BITS:              64
+    CL_DEVICE_AVAILABLE:                 TRUE
+    CL_DEVICE_COMPILER_AVAILABLE:        TRUE
+    CL_DEVICE_OPENCL_C_VERSION:          OpenCL C 1.2 
+    CL_DEVICE_MAX_WORK_GROUP_SIZE:       1024
+    CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS:  3
+                         Dimension[ 0 ]  1024
+                         Dimension[ 1 ]  1024
+                         Dimension[ 2 ]  64
+    CL_DEVICE_HOST_UNIFIED_MEMORY:       FALSE
+    CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE:  65536 ( 64 KB )
+    CL_DEVICE_LOCAL_MEM_SIZE:            49152 ( 48 KB )
+    CL_DEVICE_GLOBAL_MEM_SIZE:           12782075904 ( 12189 MB )
+    CL_DEVICE_MAX_MEM_ALLOC_SIZE:        3195518976 ( 3047 MB )
+    CL_DEVICE_EXTENSIONS:                cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+Result comparison tolerance is 0.001
+Result comparison RMSE relative tolerance is 2e-05
+Random test's seed is 212438907
+Note: Google Test filter = clfft_DirectedTest_single_3d_fwd/accuracy_test_directed_real.clfft_DirectedTest_single_3d_inv*
+[==========] Running 0 tests from 0 test cases.
+[==========] 0 tests from 0 test cases ran.
+[  PASSED  ] 0 tests.

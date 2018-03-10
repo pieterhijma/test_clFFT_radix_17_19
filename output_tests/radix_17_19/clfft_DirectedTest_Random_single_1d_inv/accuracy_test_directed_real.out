@@ -1,0 +1,2441 @@
+
+clFFT client API version:  2.15.0
+clFFT runtime version:     2.15.0
+
+    CL_PLATFORM_PROFILE:     FULL_PROFILE
+    CL_PLATFORM_VERSION:     OpenCL 1.2 CUDA 9.0.282
+    CL_PLATFORM_NAME:        NVIDIA CUDA
+    CL_PLATFORM_VENDOR:      NVIDIA Corporation
+    CL_PLATFORM_EXTENSIONS:  cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+    CL_DEVICE_NAME:                      TITAN X (Pascal)
+    CL_DEVICE_VERSION:                   OpenCL 1.2 CUDA
+    CL_DRIVER_VERSION:                   384.111
+    CL_DEVICE_TYPE:                      GPU
+    CL_DEVICE_MAX_CLOCK_FREQUENCY:       1531
+    CL_DEVICE_ADDRESS_BITS:              64
+    CL_DEVICE_AVAILABLE:                 TRUE
+    CL_DEVICE_COMPILER_AVAILABLE:        TRUE
+    CL_DEVICE_OPENCL_C_VERSION:          OpenCL C 1.2 
+    CL_DEVICE_MAX_WORK_GROUP_SIZE:       1024
+    CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS:  3
+                         Dimension[ 0 ]  1024
+                         Dimension[ 1 ]  1024
+                         Dimension[ 2 ]  64
+    CL_DEVICE_HOST_UNIFIED_MEMORY:       FALSE
+    CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE:  65536 ( 64 KB )
+    CL_DEVICE_LOCAL_MEM_SIZE:            49152 ( 48 KB )
+    CL_DEVICE_GLOBAL_MEM_SIZE:           12782075904 ( 12189 MB )
+    CL_DEVICE_MAX_MEM_ALLOC_SIZE:        3195518976 ( 3047 MB )
+    CL_DEVICE_EXTENSIONS:                cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer
+
+Result comparison tolerance is 0.001
+Result comparison RMSE relative tolerance is 2e-05
+Random test's seed is 212438907
+Note: Google Test filter = clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real*
+[==========] Running 200 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 200 tests from clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/0
+transform parameters as seen by clfft:
+1 dimension(s): 218491
+batch: 76
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 109246
+output distance: 218492
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/0
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/1
+transform parameters as seen by clfft:
+1 dimension(s): 14277120
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7138561
+output distance: 14277122
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/1
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/2
+transform parameters as seen by clfft:
+1 dimension(s): 570752
+batch: 29
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 285377
+output distance: 570754
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/2
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/3
+transform parameters as seen by clfft:
+1 dimension(s): 8519680
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4259841
+output distance: 8519682
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/3
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/4
+transform parameters as seen by clfft:
+1 dimension(s): 951665
+batch: 17
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 475833
+output distance: 951666
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/4
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/5
+transform parameters as seen by clfft:
+1 dimension(s): 118800
+batch: 141
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 59401
+output distance: 118802
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/5
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/6
+transform parameters as seen by clfft:
+1 dimension(s): 4436250
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2218126
+output distance: 4436252
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/6
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/7
+transform parameters as seen by clfft:
+1 dimension(s): 8760960
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4380481
+output distance: 8760962
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/7
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/8
+transform parameters as seen by clfft:
+1 dimension(s): 7020
+batch: 2389
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3511
+output distance: 7022
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/8
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/9
+transform parameters as seen by clfft:
+1 dimension(s): 3495856
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1747929
+output distance: 3495858
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/9
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/10
+transform parameters as seen by clfft:
+1 dimension(s): 46137
+batch: 363
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 23069
+output distance: 46138
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/10
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/11
+transform parameters as seen by clfft:
+1 dimension(s): 11979
+batch: 1400
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5990
+output distance: 11980
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/11
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/12
+transform parameters as seen by clfft:
+1 dimension(s): 1596672
+batch: 10
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 798337
+output distance: 1596674
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/12
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/13
+transform parameters as seen by clfft:
+1 dimension(s): 21970
+batch: 763
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 10986
+output distance: 21972
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/13
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/14
+transform parameters as seen by clfft:
+1 dimension(s): 12180168
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 6090085
+output distance: 12180170
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/14
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/15
+transform parameters as seen by clfft:
+1 dimension(s): 3841992
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1920997
+output distance: 3841994
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/15
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/16
+transform parameters as seen by clfft:
+1 dimension(s): 3680820
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1840411
+output distance: 3680822
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/16
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/17
+transform parameters as seen by clfft:
+1 dimension(s): 43659
+batch: 384
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 21830
+output distance: 43660
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/17
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/18
+transform parameters as seen by clfft:
+1 dimension(s): 14374800
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7187401
+output distance: 14374802
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/18
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/19
+transform parameters as seen by clfft:
+1 dimension(s): 1537900
+batch: 10
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 768951
+output distance: 1537902
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/19
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/20
+transform parameters as seen by clfft:
+1 dimension(s): 6842880
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3421441
+output distance: 6842882
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/20
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/21
+transform parameters as seen by clfft:
+1 dimension(s): 1197504
+batch: 14
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 598753
+output distance: 1197506
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/21
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/22
+transform parameters as seen by clfft:
+1 dimension(s): 1405536
+batch: 11
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 702769
+output distance: 1405538
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/22
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/23
+transform parameters as seen by clfft:
+1 dimension(s): 59904
+batch: 280
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 29953
+output distance: 59906
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/23
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/24
+transform parameters as seen by clfft:
+1 dimension(s): 50688
+batch: 330
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 25345
+output distance: 50690
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/24
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/25
+transform parameters as seen by clfft:
+1 dimension(s): 13312
+batch: 1260
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 6657
+output distance: 13314
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/25
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/26
+transform parameters as seen by clfft:
+1 dimension(s): 1897280
+batch: 8
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 948641
+output distance: 1897282
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/26
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/27
+transform parameters as seen by clfft:
+1 dimension(s): 35937
+batch: 466
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 17969
+output distance: 35938
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/27
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/28
+transform parameters as seen by clfft:
+1 dimension(s): 1796850
+batch: 9
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 898426
+output distance: 1796852
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/28
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/29
+transform parameters as seen by clfft:
+1 dimension(s): 3995264
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1997633
+output distance: 3995266
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/29
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/30
+transform parameters as seen by clfft:
+1 dimension(s): 4982796
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2491399
+output distance: 4982798
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/30
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/31
+transform parameters as seen by clfft:
+1 dimension(s): 11232
+batch: 1493
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5617
+output distance: 11234
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/31
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/32
+transform parameters as seen by clfft:
+1 dimension(s): 5336100
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2668051
+output distance: 5336102
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/32
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/33
+transform parameters as seen by clfft:
+1 dimension(s): 721710
+batch: 23
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 360856
+output distance: 721712
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/33
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/34
+transform parameters as seen by clfft:
+1 dimension(s): 14396096
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7198049
+output distance: 14396098
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/34
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/35
+transform parameters as seen by clfft:
+1 dimension(s): 520
+batch: 32263
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 261
+output distance: 522
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/35
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/36
+transform parameters as seen by clfft:
+1 dimension(s): 58080
+batch: 288
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 29041
+output distance: 58082
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/36
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/37
+transform parameters as seen by clfft:
+1 dimension(s): 267540
+batch: 62
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 133771
+output distance: 267542
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/37
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/38
+transform parameters as seen by clfft:
+1 dimension(s): 264264
+batch: 63
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 132133
+output distance: 264266
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/38
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/39
+transform parameters as seen by clfft:
+1 dimension(s): 92274
+batch: 181
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 46138
+output distance: 92276
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/39
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/40
+transform parameters as seen by clfft:
+1 dimension(s): 3853850
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1926926
+output distance: 3853852
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/40
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/41
+transform parameters as seen by clfft:
+1 dimension(s): 107653
+batch: 155
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 53827
+output distance: 107654
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/41
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/42
+transform parameters as seen by clfft:
+1 dimension(s): 7138560
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3569281
+output distance: 7138562
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/42
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/43
+transform parameters as seen by clfft:
+1 dimension(s): 9960720
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4980361
+output distance: 9960722
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/43
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/44
+transform parameters as seen by clfft:
+1 dimension(s): 1146717
+batch: 14
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 573359
+output distance: 1146718
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/44
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/45
+transform parameters as seen by clfft:
+1 dimension(s): 10980750
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5490376
+output distance: 10980752
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/45
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/46
+transform parameters as seen by clfft:
+1 dimension(s): 782628
+batch: 21
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 391315
+output distance: 782630
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/46
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/47
+transform parameters as seen by clfft:
+1 dimension(s): 88452
+batch: 189
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 44227
+output distance: 88454
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/47
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/48
+transform parameters as seen by clfft:
+1 dimension(s): 15840
+batch: 1059
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7921
+output distance: 15842
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/48
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/49
+transform parameters as seen by clfft:
+1 dimension(s): 10400000
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5200001
+output distance: 10400002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/49
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/50
+transform parameters as seen by clfft:
+1 dimension(s): 6063750
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3031876
+output distance: 6063752
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/50
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/51
+transform parameters as seen by clfft:
+1 dimension(s): 737100
+batch: 22
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 368551
+output distance: 737102
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/51
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/52
+transform parameters as seen by clfft:
+1 dimension(s): 165
+batch: 101680
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 83
+output distance: 166
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/52
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/53
+transform parameters as seen by clfft:
+1 dimension(s): 176904
+batch: 94
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 88453
+output distance: 176906
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/53
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/54
+transform parameters as seen by clfft:
+1 dimension(s): 110880
+batch: 151
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 55441
+output distance: 110882
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/54
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/55
+transform parameters as seen by clfft:
+1 dimension(s): 9130660
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4565331
+output distance: 9130662
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/55
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/56
+transform parameters as seen by clfft:
+1 dimension(s): 1756920
+batch: 9
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 878461
+output distance: 1756922
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/56
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/57
+transform parameters as seen by clfft:
+1 dimension(s): 1372800
+batch: 12
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 686401
+output distance: 1372802
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/57
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/58
+transform parameters as seen by clfft:
+1 dimension(s): 4174016
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2087009
+output distance: 4174018
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/58
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/59
+transform parameters as seen by clfft:
+1 dimension(s): 7392
+batch: 2269
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3697
+output distance: 7394
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/59
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/60
+transform parameters as seen by clfft:
+1 dimension(s): 8858304
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4429153
+output distance: 8858306
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/60
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/61
+transform parameters as seen by clfft:
+1 dimension(s): 416416
+batch: 40
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 208209
+output distance: 416418
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/61
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/62
+transform parameters as seen by clfft:
+1 dimension(s): 240570
+batch: 69
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 120286
+output distance: 240572
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/62
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/63
+transform parameters as seen by clfft:
+1 dimension(s): 1713660
+batch: 9
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 856831
+output distance: 1713662
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/63
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/64
+transform parameters as seen by clfft:
+1 dimension(s): 33800
+batch: 496
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 16901
+output distance: 33802
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/64
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/65
+transform parameters as seen by clfft:
+1 dimension(s): 14256000
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7128001
+output distance: 14256002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/65
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/66
+transform parameters as seen by clfft:
+1 dimension(s): 1761760
+batch: 9
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 880881
+output distance: 1761762
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/66
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/67
+transform parameters as seen by clfft:
+1 dimension(s): 92950
+batch: 180
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 46476
+output distance: 92952
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/67
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/68
+transform parameters as seen by clfft:
+1 dimension(s): 11881376
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5940689
+output distance: 11881378
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/68
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/69
+transform parameters as seen by clfft:
+1 dimension(s): 880000
+batch: 19
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 440001
+output distance: 880002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/69
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/70
+transform parameters as seen by clfft:
+1 dimension(s): 76050
+batch: 220
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 38026
+output distance: 76052
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/70
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/71
+transform parameters as seen by clfft:
+1 dimension(s): 12509640
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 6254821
+output distance: 12509642
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/71
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/72
+transform parameters as seen by clfft:
+1 dimension(s): 1006236
+batch: 16
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 503119
+output distance: 1006238
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/72
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/73
+transform parameters as seen by clfft:
+1 dimension(s): 5322240
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2661121
+output distance: 5322242
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/73
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/74
+transform parameters as seen by clfft:
+1 dimension(s): 9634625
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4817313
+output distance: 9634626
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/74
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/75
+transform parameters as seen by clfft:
+1 dimension(s): 31944
+batch: 525
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 15973
+output distance: 31946
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/75
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/76
+transform parameters as seen by clfft:
+1 dimension(s): 5546310
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2773156
+output distance: 5546312
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/76
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/77
+transform parameters as seen by clfft:
+1 dimension(s): 616005
+batch: 27
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 308003
+output distance: 616006
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/77
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/78
+transform parameters as seen by clfft:
+1 dimension(s): 598950
+batch: 28
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 299476
+output distance: 598952
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/78
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/79
+transform parameters as seen by clfft:
+1 dimension(s): 10396204
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5198103
+output distance: 10396206
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/79
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/80
+transform parameters as seen by clfft:
+1 dimension(s): 6093750
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3046876
+output distance: 6093752
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/80
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/81
+transform parameters as seen by clfft:
+1 dimension(s): 3465
+batch: 4841
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1733
+output distance: 3466
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/81
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/82
+transform parameters as seen by clfft:
+1 dimension(s): 13475000
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 6737501
+output distance: 13475002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/82
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/83
+transform parameters as seen by clfft:
+1 dimension(s): 2646875
+batch: 6
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1323438
+output distance: 2646876
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/83
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/84
+transform parameters as seen by clfft:
+1 dimension(s): 2091375
+batch: 8
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1045688
+output distance: 2091376
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/84
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/85
+transform parameters as seen by clfft:
+1 dimension(s): 686070
+batch: 24
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 343036
+output distance: 686072
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/85
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/86
+transform parameters as seen by clfft:
+1 dimension(s): 8251551
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4125776
+output distance: 8251552
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/86
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/87
+transform parameters as seen by clfft:
+1 dimension(s): 4392960
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2196481
+output distance: 4392962
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/87
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/88
+transform parameters as seen by clfft:
+1 dimension(s): 140608
+batch: 119
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 70305
+output distance: 140610
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/88
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/89
+transform parameters as seen by clfft:
+1 dimension(s): 10090080
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5045041
+output distance: 10090082
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/89
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/90
+transform parameters as seen by clfft:
+1 dimension(s): 877500
+batch: 19
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 438751
+output distance: 877502
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/90
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/91
+transform parameters as seen by clfft:
+1 dimension(s): 3083080
+batch: 5
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1541541
+output distance: 3083082
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/91
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/92
+transform parameters as seen by clfft:
+1 dimension(s): 9680000
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4840001
+output distance: 9680002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/92
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/93
+transform parameters as seen by clfft:
+1 dimension(s): 2681250
+batch: 6
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1340626
+output distance: 2681252
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/93
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/94
+transform parameters as seen by clfft:
+1 dimension(s): 4716250
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2358126
+output distance: 4716252
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/94
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/95
+transform parameters as seen by clfft:
+1 dimension(s): 4380480
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2190241
+output distance: 4380482
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/95
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/96
+transform parameters as seen by clfft:
+1 dimension(s): 15818400
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7909201
+output distance: 15818402
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/96
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/97
+transform parameters as seen by clfft:
+1 dimension(s): 790614
+batch: 21
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 395308
+output distance: 790616
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/97
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/98
+transform parameters as seen by clfft:
+1 dimension(s): 50820
+batch: 330
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 25411
+output distance: 50822
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/98
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/99
+transform parameters as seen by clfft:
+1 dimension(s): 22464
+batch: 746
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 11233
+output distance: 22466
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/99
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/100
+transform parameters as seen by clfft:
+1 dimension(s): 1329185
+batch: 12
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 664593
+output distance: 1329186
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/100
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/101
+transform parameters as seen by clfft:
+1 dimension(s): 799708
+batch: 20
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 399855
+output distance: 799710
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/101
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/102
+transform parameters as seen by clfft:
+1 dimension(s): 7392
+batch: 2269
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3697
+output distance: 7394
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/102
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/103
+transform parameters as seen by clfft:
+1 dimension(s): 1796850
+batch: 9
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 898426
+output distance: 1796852
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/103
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/104
+transform parameters as seen by clfft:
+1 dimension(s): 26000
+batch: 645
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 13001
+output distance: 26002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/104
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/105
+transform parameters as seen by clfft:
+1 dimension(s): 3424512
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1712257
+output distance: 3424514
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/105
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/106
+transform parameters as seen by clfft:
+1 dimension(s): 11594583
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5797292
+output distance: 11594584
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/106
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/107
+transform parameters as seen by clfft:
+1 dimension(s): 3898125
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1949063
+output distance: 3898126
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/107
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/108
+transform parameters as seen by clfft:
+1 dimension(s): 84240
+batch: 199
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 42121
+output distance: 84242
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/108
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/109
+transform parameters as seen by clfft:
+1 dimension(s): 65520
+batch: 256
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 32761
+output distance: 65522
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/109
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/110
+transform parameters as seen by clfft:
+1 dimension(s): 1352000
+batch: 12
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 676001
+output distance: 1352002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/110
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/111
+transform parameters as seen by clfft:
+1 dimension(s): 9828000
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4914001
+output distance: 9828002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/111
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/112
+transform parameters as seen by clfft:
+1 dimension(s): 709632
+batch: 23
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 354817
+output distance: 709634
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/112
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/113
+transform parameters as seen by clfft:
+1 dimension(s): 15288000
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7644001
+output distance: 15288002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/113
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/114
+transform parameters as seen by clfft:
+1 dimension(s): 5484375
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2742188
+output distance: 5484376
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/114
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/115
+transform parameters as seen by clfft:
+1 dimension(s): 473088
+batch: 35
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 236545
+output distance: 473090
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/115
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/116
+transform parameters as seen by clfft:
+1 dimension(s): 14948388
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7474195
+output distance: 14948390
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/116
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/117
+transform parameters as seen by clfft:
+1 dimension(s): 16477500
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 8238751
+output distance: 16477502
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/117
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/118
+transform parameters as seen by clfft:
+1 dimension(s): 8347248
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4173625
+output distance: 8347250
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/118
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/119
+transform parameters as seen by clfft:
+1 dimension(s): 1576960
+batch: 10
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 788481
+output distance: 1576962
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/119
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/120
+transform parameters as seen by clfft:
+1 dimension(s): 15529668
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7764835
+output distance: 15529670
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/120
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/121
+transform parameters as seen by clfft:
+1 dimension(s): 8281000
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4140501
+output distance: 8281002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/121
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/122
+transform parameters as seen by clfft:
+1 dimension(s): 228800
+batch: 73
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 114401
+output distance: 228802
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/122
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/123
+transform parameters as seen by clfft:
+1 dimension(s): 4567563
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2283782
+output distance: 4567564
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/123
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/124
+transform parameters as seen by clfft:
+1 dimension(s): 11647251
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5823626
+output distance: 11647252
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/124
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/125
+transform parameters as seen by clfft:
+1 dimension(s): 928746
+batch: 18
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 464374
+output distance: 928748
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/125
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/126
+transform parameters as seen by clfft:
+1 dimension(s): 832000
+batch: 20
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 416001
+output distance: 832002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/126
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/127
+transform parameters as seen by clfft:
+1 dimension(s): 9831250
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4915626
+output distance: 9831252
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/127
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/128
+transform parameters as seen by clfft:
+1 dimension(s): 359370
+batch: 46
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 179686
+output distance: 359372
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/128
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/129
+transform parameters as seen by clfft:
+1 dimension(s): 4586868
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2293435
+output distance: 4586870
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/129
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/130
+transform parameters as seen by clfft:
+1 dimension(s): 817960
+batch: 20
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 408981
+output distance: 817962
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/130
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/131
+transform parameters as seen by clfft:
+1 dimension(s): 1321320
+batch: 12
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 660661
+output distance: 1321322
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/131
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/132
+transform parameters as seen by clfft:
+1 dimension(s): 464373
+batch: 36
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 232187
+output distance: 464374
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/132
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/133
+transform parameters as seen by clfft:
+1 dimension(s): 227448
+batch: 73
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 113725
+output distance: 227450
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/133
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/134
+transform parameters as seen by clfft:
+1 dimension(s): 880
+batch: 19065
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 441
+output distance: 882
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/134
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/135
+transform parameters as seen by clfft:
+1 dimension(s): 365625
+batch: 45
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 182813
+output distance: 365626
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/135
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/136
+transform parameters as seen by clfft:
+1 dimension(s): 58806
+batch: 285
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 29404
+output distance: 58808
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/136
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/137
+transform parameters as seen by clfft:
+1 dimension(s): 9504000
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4752001
+output distance: 9504002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/137
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/138
+transform parameters as seen by clfft:
+1 dimension(s): 4646400
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2323201
+output distance: 4646402
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/138
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/139
+transform parameters as seen by clfft:
+1 dimension(s): 4116420
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2058211
+output distance: 4116422
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/139
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/140
+transform parameters as seen by clfft:
+1 dimension(s): 1996500
+batch: 8
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 998251
+output distance: 1996502
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/140
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/141
+transform parameters as seen by clfft:
+1 dimension(s): 1937936
+batch: 8
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 968969
+output distance: 1937938
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/141
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/142
+transform parameters as seen by clfft:
+1 dimension(s): 3833856
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1916929
+output distance: 3833858
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/142
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/143
+transform parameters as seen by clfft:
+1 dimension(s): 2006550
+batch: 8
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1003276
+output distance: 2006552
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/143
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/144
+transform parameters as seen by clfft:
+1 dimension(s): 4436250
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2218126
+output distance: 4436252
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/144
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/145
+transform parameters as seen by clfft:
+1 dimension(s): 2496
+batch: 6721
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1249
+output distance: 2498
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/145
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/146
+transform parameters as seen by clfft:
+1 dimension(s): 1901250
+batch: 8
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 950626
+output distance: 1901252
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/146
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/147
+transform parameters as seen by clfft:
+1 dimension(s): 13488475
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 6744238
+output distance: 13488476
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/147
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/148
+transform parameters as seen by clfft:
+1 dimension(s): 5528250
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2764126
+output distance: 5528252
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/148
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/149
+transform parameters as seen by clfft:
+1 dimension(s): 1365
+batch: 12291
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 683
+output distance: 1366
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/149
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/150
+transform parameters as seen by clfft:
+1 dimension(s): 15818400
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 7909201
+output distance: 15818402
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/150
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/151
+transform parameters as seen by clfft:
+1 dimension(s): 6881875
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3440938
+output distance: 6881876
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/151
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/152
+transform parameters as seen by clfft:
+1 dimension(s): 1043504
+batch: 16
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 521753
+output distance: 1043506
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/152
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/153
+transform parameters as seen by clfft:
+1 dimension(s): 735075
+batch: 22
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 367538
+output distance: 735076
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/153
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/154
+transform parameters as seen by clfft:
+1 dimension(s): 3513840
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1756921
+output distance: 3513842
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/154
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/155
+transform parameters as seen by clfft:
+1 dimension(s): 10023750
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5011876
+output distance: 10023752
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/155
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/156
+transform parameters as seen by clfft:
+1 dimension(s): 158184
+batch: 106
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 79093
+output distance: 158186
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/156
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/157
+transform parameters as seen by clfft:
+1 dimension(s): 464640
+batch: 36
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 232321
+output distance: 464642
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/157
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/158
+transform parameters as seen by clfft:
+1 dimension(s): 8580000
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4290001
+output distance: 8580002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/158
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/159
+transform parameters as seen by clfft:
+1 dimension(s): 570752
+batch: 29
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 285377
+output distance: 570754
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/159
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/160
+transform parameters as seen by clfft:
+1 dimension(s): 37440
+batch: 448
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 18721
+output distance: 37442
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/160
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/161
+transform parameters as seen by clfft:
+1 dimension(s): 694980
+batch: 24
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 347491
+output distance: 694982
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/161
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/162
+transform parameters as seen by clfft:
+1 dimension(s): 16506875
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 8253438
+output distance: 16506876
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/162
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/163
+transform parameters as seen by clfft:
+1 dimension(s): 1462500
+batch: 11
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 731251
+output distance: 1462502
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/163
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/164
+transform parameters as seen by clfft:
+1 dimension(s): 12127500
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 6063751
+output distance: 12127502
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/164
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/165
+transform parameters as seen by clfft:
+1 dimension(s): 3163680
+batch: 5
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1581841
+output distance: 3163682
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/165
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/166
+transform parameters as seen by clfft:
+1 dimension(s): 3844750
+batch: 4
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1922376
+output distance: 3844752
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/166
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/167
+transform parameters as seen by clfft:
+1 dimension(s): 4950
+batch: 3389
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2476
+output distance: 4952
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/167
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/168
+transform parameters as seen by clfft:
+1 dimension(s): 327600
+batch: 51
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 163801
+output distance: 327602
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/168
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/169
+transform parameters as seen by clfft:
+1 dimension(s): 10067200
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5033601
+output distance: 10067202
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/169
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/170
+transform parameters as seen by clfft:
+1 dimension(s): 2628288
+batch: 6
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1314145
+output distance: 2628290
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/170
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/171
+transform parameters as seen by clfft:
+1 dimension(s): 865280
+batch: 19
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 432641
+output distance: 865282
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/171
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/172
+transform parameters as seen by clfft:
+1 dimension(s): 6591000
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3295501
+output distance: 6591002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/172
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/173
+transform parameters as seen by clfft:
+1 dimension(s): 7157150
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 3578576
+output distance: 7157152
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/173
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/174
+transform parameters as seen by clfft:
+1 dimension(s): 207025
+batch: 81
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 103513
+output distance: 207026
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/174
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/175
+transform parameters as seen by clfft:
+1 dimension(s): 9796423
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4898212
+output distance: 9796424
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/175
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/176
+transform parameters as seen by clfft:
+1 dimension(s): 377300
+batch: 44
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 188651
+output distance: 377302
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/176
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/177
+transform parameters as seen by clfft:
+1 dimension(s): 623700
+batch: 26
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 311851
+output distance: 623702
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/177
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/178
+transform parameters as seen by clfft:
+1 dimension(s): 1755000
+batch: 9
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 877501
+output distance: 1755002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/178
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/179
+transform parameters as seen by clfft:
+1 dimension(s): 75504
+batch: 222
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 37753
+output distance: 75506
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/179
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/180
+transform parameters as seen by clfft:
+1 dimension(s): 9886500
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4943251
+output distance: 9886502
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/180
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/181
+transform parameters as seen by clfft:
+1 dimension(s): 5872581
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2936291
+output distance: 5872582
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/181
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/182
+transform parameters as seen by clfft:
+1 dimension(s): 4394000
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2197001
+output distance: 4394002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/182
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/183
+transform parameters as seen by clfft:
+1 dimension(s): 814968
+batch: 20
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 407485
+output distance: 814970
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/183
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/184
+transform parameters as seen by clfft:
+1 dimension(s): 16353792
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 8176897
+output distance: 16353794
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/184
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/185
+transform parameters as seen by clfft:
+1 dimension(s): 140140
+batch: 119
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 70071
+output distance: 140142
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/185
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/186
+transform parameters as seen by clfft:
+1 dimension(s): 900900
+batch: 18
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 450451
+output distance: 900902
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/186
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/187
+transform parameters as seen by clfft:
+1 dimension(s): 4914000
+batch: 3
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 2457001
+output distance: 4914002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/187
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/188
+transform parameters as seen by clfft:
+1 dimension(s): 1623076
+batch: 10
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 811539
+output distance: 1623078
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/188
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/189
+transform parameters as seen by clfft:
+1 dimension(s): 16120377
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 8060189
+output distance: 16120378
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/189
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/190
+transform parameters as seen by clfft:
+1 dimension(s): 149688
+batch: 112
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 74845
+output distance: 149690
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/190
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/191
+transform parameters as seen by clfft:
+1 dimension(s): 8154432
+batch: 2
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 4077217
+output distance: 8154434
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/191
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/192
+transform parameters as seen by clfft:
+1 dimension(s): 1186380
+batch: 14
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 593191
+output distance: 1186382
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/192
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/193
+transform parameters as seen by clfft:
+1 dimension(s): 2648646
+batch: 6
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 1324324
+output distance: 2648648
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/193
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/194
+transform parameters as seen by clfft:
+1 dimension(s): 120835
+batch: 138
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 60418
+output distance: 120836
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/194
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/195
+transform parameters as seen by clfft:
+1 dimension(s): 1122660
+batch: 14
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 561331
+output distance: 1122662
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/195
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/196
+transform parameters as seen by clfft:
+1 dimension(s): 65000
+batch: 258
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 32501
+output distance: 65002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/196
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/197
+transform parameters as seen by clfft:
+1 dimension(s): 908544
+batch: 18
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 454273
+output distance: 908546
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/197
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/198
+transform parameters as seen by clfft:
+1 dimension(s): 624000
+batch: 26
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 312001
+output distance: 624002
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/198
+[ RUN      ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/199
+transform parameters as seen by clfft:
+1 dimension(s): 11356800
+batch: 1
+single precision
+in-place
+hermitian interleaved -> real
+input stride(s): 1
+output stride(s): 1
+input distance: 5678401
+output distance: 11356802
+[       OK ] clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real.inplace_interleaved/199
+[----------] Global test environment tear-down
+[==========] 200 tests from 1 test case ran.
+[  PASSED  ] 200 tests.
