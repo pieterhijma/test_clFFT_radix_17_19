@@ -1,0 +1,165 @@
+#+title: Test Report radix 17 and 19 support for clFFT
+#+author: Pieter Hijma
+#+options: toc:nil ':t
+#+language: en
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [a4paper]
+#+latex_header: \usepackage[english]{babel}
+#+latex_header: \usepackage{fullpage}
+#+latex_header: \hypersetup{colorlinks}
+#+latex_header: \hypersetup{citecolor=black}
+#+latex_header: \hypersetup{filecolor=black}
+#+latex_header: \hypersetup{linkcolor=black}
+#+latex_header: \hypersetup{urlcolor=black}
+
+* Introduction
+
+This document describes the methodology and results of testing the radix 17 and
+radix 19 contribution against the ~develop~ branch in the clFFT library.  Since
+not all tests pass in the original ~develop~ branch, it is not enough to just
+verify whether all tests have passed or not, but more analysis is needed.  If
+the radix 17 and 19 contribution has issues that also arise in the ~develop~
+branch, then this is deemed not to be an issue created by our contribution.
+
+The methodology is explained in the following section and the results in
+Sec.\nbsp{}[[sec:results]].  Since some tests are only targeted at a specific
+power, these tests are irrelevant for the radix 17 and radix 19 contribution.
+These tests are listed in App.\nbsp{}[[app:irrelevant]].
+
+* Methodology <<sec:methodology>>
+
+We checked out a ~clFFT~ instance with the ~develop~ branch and an instance
+with the ~radix_17_19~ branch.  We ran the same tests on both branches and
+stored the results in several files with the name of the tests.  We used the
+following command for running the tests:
+
+#+begin_src sh
+LD_LIBRARY_PATH=clFFT_$version/build/library \
+   clFFT_$version/build/staging/Test -v \
+   --seed=212438907  --gtest_print_time=0 \
+   --gtest_filter=$test* \
+   > $OUTPUT_DIR/$version/$test.out 2> /dev/null
+#+end_src
+In this command ~$version~ is either ~develop~ or ~radix_17_19~, ~$test~ is the
+test to run, ~$OUTPUT_DIR~ is the directory for writing the output files.  To
+make sure that the files are as identical as possible, we use a fixed seed and
+we do not print the timing results.  We run each test separately, since
+different tests have different results.  We used an NVIDIA Titan X Pascal GPU
+with OpenCL 1.2 CUDA 9.0.282.  The driver is version 384.111.
+
+After the tests have run, we compared all the test files with an editor with
+diff support, in our case ~vimdiff~.  To further equalize the results, we used
+the commands below to temporarily equalize the results.  Since specific
+filenames may be referred to in the output of the tests, we rename all the
+occurences in one file to the occurrences in the other file.  Some test cases
+in ~radix_17_19~ have more tests than in ~develop~, so we remove the numbering
+of the tests.  And finally, some tests use random parameters.  The tests
+mention the random number that generates those parameters ("where GetParam...")
+and for an unknown reason these numbers are different, while the actual
+parameters are the same.  We can verify these parameters with the ~-v~ flag
+that is turned on in the command above.
+
+- rename directories in the file :: ~%s/clFFT_develop/clFFT_radix_17_19/g~
+- remove test numbering ::
+     ~%s!inplace_interleaved/[0-9]\+!inplace_interleaved!g~
+- remove GetParam :: ~%s/, where GetParam.*$//g~
+With these commands, the files can be inspected for differences.  We list the
+results in the section below.
+
+* Results <<sec:results>>
+
+In Table [[results]], we show the comparison of the tests for the ~develop~ and
+~radix_17_19~ branch.  Table [[legend]] shows the legend.  The comparison has
+basically three results: PASS, which means that both tests are identical and
+both branches pass all tests; SAME, which means that the tests are identical,
+but not all tests pass; and finally, SIMILAR, which means that the same tests
+pass or fail on both sides, that the ~radix_17_19~ has more (indicated by the
+note MORE) tests than the ~develop~ branch and may have errors similar to other
+tests in the ~develop~ branch.  For example, in the 1D single-precision
+accuracy test of real numbers, the test with dimension 57 (3 \times 19, part of
+~radix_17_19~) has an accuracy error of 3.15159 while the test with dimension
+55 (5 \times 11, not part of ~radix_17_19~) has an accuracy error 3.38885.
+This is indicated with the note ACCURACY.  Since these results are similar, we
+consider it not to be a failure of the contribution in the ~radix_17_19~
+branch, but failures that already exist in the ~develop~ branch.  The PARAMS
+note indicates that the random parameters are reported to be different, while
+in actuality they result in the same parameters in the test.  The note ERRCODE
+shows that there are errors thrown.  This happens in both the ~develop~ branch
+and the ~radix_17_19~ branch.
+
+* Conclusion
+
+All relevant tests in the ~radix_17_19~ branch either pass, have the same
+passes or failures, or have failures that are similar to failures in the
+~develop~ branch.  
+
+
+#+name: results
+#+caption: The comparison of the test results of the ~develop~ and ~radix_17_19~ branch.
+#+attr_latex: :center t :font \fontsize{8}{11}\selectfont
+| name test                                                                                       | comparison | notes           |
+|-------------------------------------------------------------------------------------------------+------------+-----------------|
+| ~test_harness_tests_buffer~                                                                     | PASS       |                 |
+| ~clfft_UnitTest~                                                                                | PASS       |                 |
+| ~accuracy_test_mixed_single~                                                                    | PASS       |                 |
+| ~accuracy_test_mixed_double~                                                                    | SAME       |                 |
+| ~accuracy_test_callback_single~                                                                 | PASS       |                 |
+| ~accuracy_test_postcallback_double~                                                             | SAME       |                 |
+| ~clfft_RandomTest/accuracy_test_random~                                                         | SAME       | PARAMS          |
+| ~clfft_DirectedTest_single_1d_fwd/accuracy_test_directed_real~                                  | SIMILAR    | ACCURACY, MORE  |
+| ~clfft_DirectedTest_single_1d_inv/accuracy_test_directed_real~                                  | PASS       | MORE            |
+| ~clfft_DirectedTest_double_1d_fwd/accuracy_test_directed_real~                                  | SIMILAR    | ERRCODE, MORE   |
+| ~clfft_DirectedTest_double_1d_inv/accuracy_test_directed_real~                                  | SIMILAR    | ERRCODE, MORE   |
+| ~clfft_DirectedTest_single_2d_fwd/accuracy_test_directed_real~                                  | SIMILAR    | ACCURACY, MORE  |
+| ~clfft_DirectedTest_single_2d_inv/accuracy_test_directed_real~                                  | PASS       | MORE            |
+| ~clfft_DirectedTest_Random_single_1d_inv/accuracy_test_directed_real~                           | PASS       |                 |
+| ~clfft_DirectedTest_Random_double_1d_fwd/accuracy_test_directed_real~                           | SAME       | PARAMS          |
+| ~clfft_DirectedTest_Random_double_1d_inv/accuracy_test_directed_real~                           | SAME       | PARAMS          |
+| ~clfft_DirectedTest_single_1d_fwd/accuracy_test_directed_complex~                               | PASS       | MORE            |
+| ~clfft_DirectedTest_single_1d_inv/accuracy_test_directed_complex~                               | PASS       | MORE            |
+| ~mixed_radices_precallback/mixed_radix_precallback~                                             | SAME       |                 |
+| ~mixed_radices_postcallback/mixed_radix_postcallback~                                           | SAME       |                 |
+
+#+name: legend
+#+caption: The legend of the comparison and notes results of Table [[results]].
+#+attr_latex: :center t :font \fontsize{8}{11}\selectfont
+| PASS     | both branches pass                                                          |
+| SAME     | both branches have identical passes and fails                               |
+| PARAMS   | the random parameters appear to be different, but are the same for the test |
+| SIMILAR  | both branches have the same issues                                          |
+| ACCURACY | there are accuracy failures                                                 |
+| MORE     | because of the pull request, there are more tests                           |
+| FAIL     | the new_radix branch fails, while develop passes                            |
+| ALLOC    | Bad alloc exceptions                                                        |
+| ERRCODE  | Error code not defined error                                                |
+
+\newpage
+\appendix
+* Irrelevant tests <<app:irrelevant>>
+
+Tests with a specific power:
+- ~accuracy_test_pow2_single.accuracy_test_pow2_double~
+- ~accuracy_test_pow3_single~
+- ~accuracy_test_pow3_double.accuracy_test_pow5_single~
+- ~accuracy_test_pow5_double~
+- ~accuracy_test_pow7_single~
+- ~accuracy_test_pow7_double~
+- ~accuracy_test_pow2_precallback_single.accuracy_test_pow2_precallback_double~
+- ~accuracy_test_pow3_precallback_single~
+- ~accuracy_test_pow3_precallback_double~
+- ~accuracy_test_pow5_precallback_single~
+- ~accuracy_test_pow5_precallback_double~
+- ~accuracy_test_pow7_precallback_single.accuracy_test_pow7_precallback_double.~ @@latex:\\@@
+  ~accuracy_test_postcallback_single~
+- ~clfft_DirectedTest_pow2_single_1d_fwd/accuracy_test_directed_real~
+- ~clfft_DirectedTest_pow2_single_1d_inv/accuracy_test_directed_real~
+- ~clfft_DirectedTest_pow2_double_1d_fwd/accuracy_test_directed_real~
+- ~clfft_DirectedTest_pow2_double_1d_inv/accuracy_test_directed_real~
+- ~clfft_pow7_AllInpSizeTest/accuracy_test_pow7_all_ip_size.mixed_radices/~
+  @@latex:\\@@ ~mixed_radix~
+
+\noindent
+Contains no tests:
+- ~clfft_DirectedTest_single_3d_fwd/accuracy_test_directed_real.~ @@latex:\\@@
+  ~clfft_DirectedTest_single_3d_inv~
+
