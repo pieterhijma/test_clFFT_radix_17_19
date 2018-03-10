@@ -57,4 +57,5 @@ The tests can be verified with the command:
 #+end_src
 
 This command uses the tool ~vimdiff~.  The results of the tests are documented
-in ~doc/test_report/test_report_clfft_radix_17_19.org~.  
+in ~doc/test_report/test_report_clfft_radix_17_19.org~.  The .pdf version is
+[[https://gist.github.com/pieterhijma/f9712b2f30691163811594ef418a5be6#file-test_report_clfft_radix_17_19-pdf][here]].
