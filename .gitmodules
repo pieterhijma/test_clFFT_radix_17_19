@@ -1,3 +1,6 @@
 [submodule "clFFT_develop"]
 	path = clFFT_develop
 	url = https://github.com/clMathLibraries/clFFT.git
+[submodule "clFFT_radix_17_19"]
+	path = clFFT_radix_17_19
+	url = https://github.com/pieterhijma/clFFT.git
