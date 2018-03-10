@@ -1,0 +1,60 @@
+#+title: Testing the clFFT radix 17 and 19 kernels
+
+* Introduction
+
+This repository contains the outputs of testing radix 17 and 19 kernels in the
+clFFT library.  This repository contains two submodules, one pointing to the
+~development~ branch of ~clFFT~ and the other pointing to the ~radix_17_19~
+branch.  Finally, the repository contains the source of a document describing
+the test results.
+
+* Checking out the repositories
+
+This repository and its submodules can be checked out in the following way:
+
+#+begin_src sh
+git clone https://github.com/pieterhijma/test_clFFT_radix_17_19.git
+cd test_clFFT_radix_17_19
+git submodule init
+git submodule update
+#+end_src
+
+* Building the two clFFT instances
+
+The two clFFT instances are built with the following commands (for the
+~develop~ repository:
+
+#+begin_src sh
+cd clFFT_develop
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=../../dist_clFFT_develop -DBUILD_TEST=yes ../src \
+      -DOpenCL_LIBRARY:FILEPATH=<your opencl library> \
+      -DBOOST_LIBRARYDIR:PATH=<your boost library path> \
+      -DBOOST_INCLUDEDIR:PATH=<your boost include path>
+#+end_src
+
+Building the ~radix_17_19~ version is similar.
+
+* Running the tests
+
+The tests can be run from the root directory with the following command:
+
+#+begin_src sh
+./scripts/run_tests
+#+end_src
+
+The tests can be run partially.  The tests that are listed in the file
+~script/processed_tests.data~ are not run, so removing one or emptying the
+complete file will run one or all tests respectively.
+
+* Verifying the tests
+
+The tests can be verified with the command:
+
+#+begin_src sh
+./scripts/verify_tests
+#+end_src
+
+This command uses the tool ~vimdiff~.  The results of the tests are documented
+in ~doc/test_report/test_report_clfft_radix_17_19.org~.  
